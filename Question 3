@@ -1,0 +1,9 @@
+var expect = function(val) {
+    var error = function(message){
+        throw new Error(message);
+    }
+    return {
+        toBe : (value) => (value === val) ? (true) : error("Not Equal"),
+        notToBe : (value) => (val !== value) ? true : error("Equal")
+    }
+};
