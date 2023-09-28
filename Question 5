@@ -1,0 +1,15 @@
+Simple and straightforward approach:
+var map = function(arr, fn) {
+    return arr.map(fn);
+};
+
+************************************************************************
+We can use this approach also...
+
+var map = function(arr, fn) {
+    var ansArr=[];
+    for(var i=0; i<arr.length; i++){
+        ansArr.push(fn(arr[i], i));
+    }
+    return ansArr;
+};
