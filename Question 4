@@ -1,0 +1,15 @@
+ar createCounter = function(init) {
+    var temp = init;
+    return {
+        increment : function(){
+            return ++temp;
+        },
+        decrement : function(){
+            return --temp;
+        },
+        reset : function(){
+            temp = init;
+            return temp;
+        }
+    }
+};
