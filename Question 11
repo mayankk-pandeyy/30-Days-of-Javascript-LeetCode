@@ -1,0 +1,13 @@
+function memoize(fn) {
+    const cache = {};
+    let result = {};
+    return function(...args) {
+        // const key = JSON.stringify(args);
+        const key = args;
+        (key in cache) ? cache[key] : (
+            result = fn(...args),
+            cache[key] = result
+        )
+        return result;
+    }
+}
