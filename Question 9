@@ -1,0 +1,18 @@
+# Code
+Sample 1 : 99% efficient
+
+var argumentsLength = function(...args) {
+	return args.length;
+};
+
+**********
+
+Sample 2 : 87% efficient
+
+var argumentsLength = function(...args) {
+	let count = 0;
+    args.map((value) => {
+        count++;
+    })
+    return count;
+};
