@@ -1,0 +1,7 @@
+var debounce = function(fn, t) {
+    var debounced;
+    return function(...args) {
+        clearTimeout(debounced);
+        debounced = setTimeout(() => fn(...args), t);
+    }
+};
